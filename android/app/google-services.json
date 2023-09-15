@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "956961195591",
+    "project_id": "nomadthread-e9e06",
+    "storage_bucket": "nomadthread-e9e06.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:956961195591:android:fb13e967e471f919375362",
+        "android_client_info": {
+          "package_name": "com.example.assign_11"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "956961195591-r6sbvni4toih40r3adrtss5t544d3te2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFD_8eFks11eod5Aa0iBNVug_5eV3ByN8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "956961195591-r6sbvni4toih40r3adrtss5t544d3te2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "956961195591-2jsfoe43s5j5njdvm3uo23pikdkvroip.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.assign11.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

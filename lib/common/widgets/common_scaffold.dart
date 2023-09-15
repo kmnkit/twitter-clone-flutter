@@ -16,6 +16,8 @@ class CommonScaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerTop,
       appBar: appBar ??
           AppBar(
             elevation: 0,
@@ -32,7 +34,7 @@ class CommonScaffold extends StatelessWidget {
       body: SafeArea(
           child: Padding(
         padding: const EdgeInsets.all(
-          Sizes.size32,
+          Sizes.size24,
         ),
         child: body,
       )),
