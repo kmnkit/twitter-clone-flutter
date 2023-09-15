@@ -5,6 +5,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 class SettingsRepository {
   static const String _settingKey = "setting";
 
+  // main에서 열어 놓은 box open
   final Box<SettingModel> _settingsBox = Hive.box<SettingModel>("settings");
 
   Future<void> setSetting(SettingModel setting) async =>

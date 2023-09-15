@@ -30,8 +30,9 @@ class SettingsScreenState extends ConsumerState<SettingsScreen> {
         actions: [
           ToggleButtons(
             direction: Axis.horizontal,
-            isSelected:
-                ref.watch(settingsProvider).isDarkMode ? [false, true] : [true, false],
+            isSelected: ref.watch(settingsProvider).isDarkMode
+                ? [false, true]
+                : [true, false], // dark mode여부 판단
             onPressed: (index) =>
                 ref.read(settingsProvider.notifier).setDarkMode(index == 1),
             selectedColor: Colors.amber.shade700,

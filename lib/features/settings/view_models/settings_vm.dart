@@ -11,31 +11,25 @@ class SettingsViewModel extends Notifier<SettingModel> {
     return _repository.getSetting();
   }
 
-  void setPrivacy(bool value) async {
+  Future<void> _updateSetting(
+      SettingModel Function(SettingModel current) updateFn) async {
     final currentSetting = _repository.getSetting();
-    final updatedSetting = currentSetting.copyWith(isPrivate: value);
+    final updatedSetting = updateFn(currentSetting);
     await _repository.setSetting(updatedSetting);
     state = updatedSetting;
   }
 
-  void setAllowMention(int value) async {
-    final currentSetting = _repository.getSetting();
-    final updatedSetting = currentSetting.copyWith(allowMention: value);
-    await _repository.setSetting(updatedSetting);
-    state = updatedSetting;
-  }
+  void setPrivacy(bool value) async =>
+      await _updateSetting((current) => current.copyWith(isPrivate: value));
 
-  void setDarkMode(bool value) async {
-    final currentSetting = _repository.getSetting();
-    final updatedSetting = currentSetting.copyWith(isDarkMode: value);
-    await _repository.setSetting(updatedSetting);
-    state = updatedSetting;
-  }
+  void setAllowMention(int value) async =>
+      await _updateSetting((current) => current.copyWith(allowMention: value));
+
+  void setDarkMode(bool value) async =>
+      await _updateSetting((current) => current.copyWith(isDarkMode: value));
 
   bool isDarkMode() => _repository.getSetting().isDarkMode;
-
   bool isPrivate() => _repository.getSetting().isPrivate;
-
   int allowMention() => _repository.getSetting().allowMention;
 }
 
